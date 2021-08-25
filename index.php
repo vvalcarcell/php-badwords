@@ -11,10 +11,13 @@
 <?php 
 
 $text = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis dolorem neque expedita laborum. Pariatur ducimus voluptatum perferendis quidem nulla omnis fugit autem. Rem cum rerum minus placeat perspiciatis. Aspernatur, soluta!";
-echo "<div>{$text}</div></br>";
+$textLength = strlen($text);
+echo "<div>{$text}</div> <div>$textLength</div> </br>";
 
-$censoredText = str_replace(['laborum','Rem','ipsum'], '***', $text);
-echo "<div>{$censoredText}</div>";
+$getParameter= $_GET['word'];
+$censoredText = str_replace($getParameter, '***', $text);
+$censoredTextLength = strlen($censoredText);
+echo "<div>{$censoredText}</div> <div>$censoredTextLength</div>";
 ?>
 
 
