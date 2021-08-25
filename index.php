@@ -12,12 +12,12 @@
 
 $text = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis dolorem neque expedita laborum. Pariatur ducimus voluptatum perferendis quidem nulla omnis fugit autem. Rem cum rerum minus placeat perspiciatis. Aspernatur, soluta!";
 $textLength = strlen($text);
-echo "<div>{$text}</div> <div>$textLength</div> </br>";
+echo "<div>{$text}</div> <div>Il paragrafo è lungo {$textLength} caratteri.</div> </br>";
 
 $getParameter= $_GET['word'];
 $censoredText = str_replace($getParameter, '***', $text);
 $censoredTextLength = strlen($censoredText);
-echo "<div>{$censoredText}</div> <div>$censoredTextLength</div>";
+echo "<div>{$censoredText}</div> <div>Il paragrafo è lungo $censoredTextLength caratteri.</div>";
 ?>
 
 
